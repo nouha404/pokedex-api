@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Permanent+Marker&family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Bienvenue dans l'univer des Pokemons</h1>
+    <form method="GET">
+
+        <input type="search" placeholder="Recherchez votre pokemon" id="pokemon"/>
+        <button>Recherche</button>
+    </form>
+
+    <div id="container">
+        {% for item in items %}
+            {%for name in items2 %}
+            <div class="card">
+                <img alt="image" src="{{ item }}">
+                    <h3>{{ name }}</h3>
+            </div>
+            {% endfor %}
+        {%endfor %}}
+
+    </div>
+
+    
+</body>
+</html>
